@@ -1,6 +1,3 @@
-Below is a **conceptual** Python 3.12 code skeleton illustrating how you might structure your EarthFlow MVP (inspired by Airflow LocalExecutor). It is not a fully functional system yet—it outlines the architecture, core modules, and key classes to help you get started in a maintainable way.
-
----
 ## High-Level Architecture
 
 1. **Directory with Python DAG files**  
@@ -492,6 +489,4 @@ This skeleton demonstrates:
 - **Two separate processes**: A scheduler (which periodically scans DAG files, registers them, and triggers runs) and a REST API (for listing DAGs, triggering runs, reading statuses, logs, etc.).  
 - **PostgreSQL** for shared state and metadata.  
 - **Local Executor** style execution for simplicity.  
-- **File-based logging** with references stored in DB.  
-
-From here, you can flesh out each piece depending on your MVP requirements (e.g., implement a robust cron scheduler, complete the local execution logic, add more endpoints for logs, authentication, etc.). This approach provides a straightforward foundation that you can iterate upon as you add more advanced features (KubernetesExecutor, alerting, UI, etc.).
+- **File-based logging** with references stored in DB.
